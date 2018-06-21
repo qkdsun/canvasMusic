@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title><%= title %></title>
+	<link rel='stylesheet' href='/stylesheets/index.css' />
+</head>
+
+<body>
+	<header> 
+		<h1>Welcome to <%= title %></h1>
+		<p>
+			控制音量 <input id="volume" type="range" min="0" max="100" value="60"/>
+		</p>
+		<ul id="type">
+			<li data-type="arc">圆</li>
+			<li data-type="column" class="selected">柱状</li>
+		</ul>
+	</header>
+	
+	<div class="left">
+	    <!--显示歌名-->
+		<ul id="lis">
+			<% music.forEach( (name) =>{ %>
+				<li title = "<%= name %>"><%= name %></li>
+			<% } )%>
+		</ul>
+	</div>
+	<div class = "right" id = "box">
+		<canvas id="canvas">
+			浏览器不支持
+		</canvas>
+	</div>
+	<script type="text/javascript" src="/javascripts/musicclass.js"></script>
+    <script type="text/javascript" src="/javascripts/musicvisualize.js"></script>
+	<script type="text/javascript" src="/javascripts/index.js"></script>
+</body>
+
+</html>
