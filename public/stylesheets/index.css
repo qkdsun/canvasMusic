@@ -34,7 +34,7 @@ header h1{
 	left:10px;
 	top:170px;
 	bottom:10px;
-	width:200px;
+	width: 15%;
 	border:solid #fff 1px;
 }
 
@@ -60,7 +60,8 @@ header h1{
 	top:170px;
 	right:10px;
 	bottom:10px;
-	left:220px;
+	left: calc(15% + 20px);
+	left: -webkit-calc(15% + 20px);
 	border:solid #fff 1px;
 }
 
